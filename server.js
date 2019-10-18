@@ -6,6 +6,7 @@ app = require("express")()
 Cryptr = require("cryptr")
 
 let filedata = {};
+
 let fileName= __dirname+"/file.json";
 let data = require(__dirname+"/file.json")
 
@@ -37,8 +38,10 @@ app.use("/file/en/:keyA/:keyB" ,(req,res ,next)=>{
 //DECODE 
 
 app.use("/file/dc/:keyA/:keyB",(req,res,next)=>{
-   
-    if(req.params.keyA==data.Request.keyA && req.params.keyB==data.Request.keyB){
+   if(!filedata[0]){console.log("Data is not Encrypted")
+    res.send("Data is not Encrypted , please encrypt first")
+    }
+    else if(req.params.keyA==data.Request.keyA && req.params.keyB==data.Request.keyB){
         var decryptdata={}
         let keyA = new Cryptr(req.params.keyA)
         let keyB = new Cryptr(req.params.keyB)
@@ -74,8 +77,8 @@ app.listen(3000,()=>{console.log("server is running")})
 
 /*// remove this comment
 // TO CHECK BY COMMAND LINE REMOVE THE COMMENT 
-//BY BROWSER TO ENCODE TYPE :->  http://localhost:3000/file/en/:keyA/:keyB
-//BY BROWSER TO DECODE TYPE :->  http://localhost:3000/file/dc/:keyA/:keyB
+//BY BROWSER TO ENCODE TYPE :->  http://localhost:3000/file/en/keyA/keyB
+//BY BROWSER TO DECODE TYPE :->  http://localhost:3000/file/dc/keyA/keyB
 
 // encode request
 request.get({'url':"http://localhost:3000/file/en/:xyaaaaaz/:pqr",json: true},(error,response,body)=>{
@@ -96,6 +99,5 @@ request.get({'url':"http://localhost:3000/file/dc/:xyaaaaaz/:pqr",json: true},(e
       console.log(body)
     }
 })
-
 
 */

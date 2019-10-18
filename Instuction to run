@@ -1,0 +1,62 @@
+- To Encrypt
+    - Encrypt_Decrypt> run the following command
+        - node server.js
+    - by browser
+    - type url http://localhost:3000/file/en/keyA/keyB
+        - here keyA and keyB are the key to encrypt the data
+        - you can use any key to encrypt the data 
+        - you must enter the both key's
+                - i.e
+                    - keyA : Cypert
+                    - keyB : Business
+                    - so url = http://localhost:3000/file/en/Cypert/Business
+        - one's you hit the url you will get the output
+    - by postman
+        -Encrypt_Decrypt> run the following command
+            - node server.js
+        - open postman
+        - select GET method
+        - type url http://localhost:3000/file/en/keyA/keyB
+        - here keyA and keyB are the key to encrypt the data
+        - you can use any key to encrypt the data 
+        - you must enter the both key's
+                - i.e
+                    - keyA : Cypert
+                    - keyB : Business
+                    - so url = http://localhost:3000/file/en/Cypert/Business
+        - one's you hit the url you will get the output
+   
+    
+- To Decrypt
+    -by browser
+    -type url http://localhost:3000/file/dc/keyA/keyB
+        - here keyA and keyB are the key to Decrypt the data
+        - you must use key's ,which you have used to encrypt ie. keyA-> Cypert & keyB-> Business
+        - you must enter the both key's
+                - i.e
+                    - keyA : Cypert
+                    - keyB : Business
+                    - so url = http://localhost:3000/file/dc/Cypert/Business
+        - one's you hit the url you will get the output
+
+    -by postman
+        - open postman
+        - select GET method
+        - type url http://localhost:3000/file/dc/keyA/keyB
+        -  - here keyA and keyB are the key to Decrypt the data
+        - you must use key's ,which you have used to encrypt ie. keyA-> Cypert & keyB-> Business
+        - you must enter the both key's
+                - i.e
+                    - keyA : Cypert
+                    - keyB : Business
+                    - so url = http://localhost:3000/file/dc/Cypert/Business
+        - one's you hit the url you will get the output
+
+
+- Encrypt and Decrypt 
+    - by command line
+        - Remove the comment on line number 81 & 104
+        - run the file
+            - i.e 
+                - node server.js
+        - you will see encryptd and then decrypte data at a time
