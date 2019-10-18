@@ -1,0 +1,36 @@
+{
+  "Request": {
+    "_cmnt": "Unencrypted text",
+    "TranID": "Uniq_id",
+    "keyA": "xyz",
+    "keyB": "pqr",
+    "TmpltID": "temID",
+    "TYPE": "SYS",
+    "Print": "yes",
+    "Copy": "yes",
+    "PWDPTD": "pwdptd",
+    "Hash": "xyz",
+    "Owner": "suresh",
+    "Lang": "english",
+    "Agency": "MOI",
+    "Distributation": "Email/Vault"
+  },
+  "Header": {
+    "_Comment": "flag or comment",
+    "HAttrib": "value",
+    "CPermit": "yes",
+    "Paid": "yes"
+  },
+  "Body": {
+    "_Comment": "form input",
+    "FAttrib": "value",
+    "Consigment Type": "type",
+    "Consignment Handing": "value"
+  },
+  "Object": {
+    "_Comment": "form input",
+    "TemplateURL": "url",
+    "DigSign": "sign",
+    "A": "a"
+  }
+}
